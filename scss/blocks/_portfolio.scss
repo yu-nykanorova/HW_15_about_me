@@ -1,0 +1,48 @@
+.portfolio {
+	padding: 96rem 0;
+
+	&__desc {
+		max-width: 600rem;
+	}
+
+	@include desktop-small {
+		padding: 60rem 0;
+	}
+
+}
+
+.portfolio-list {
+	margin-top: 80rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(256rem, 1fr));
+	gap: 29rem;
+
+	@include tablet {
+		margin-top: 60rem;
+		grid-template-columns: 1fr 1fr;
+	}
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+}
+
+.portfolio-item {
+	img {
+		width: 100%;
+		transition: .2s all ease-in-out;
+		&:hover {
+			transform: scale(1.02);
+			box-shadow: 0 0 15rem 0 rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	@include desktop {
+		&:first-child {
+			grid-row-start: 1;
+			grid-row-end: 3;
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+	}
+
+}

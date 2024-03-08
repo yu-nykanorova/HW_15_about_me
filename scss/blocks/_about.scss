@@ -1,0 +1,53 @@
+.about {
+    padding: 96rem 0;
+
+    @include desktop-small {
+		padding: 50rem 0;
+	}
+}
+
+.about-container {
+    padding-left: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 124rem;
+
+    &__image {
+        flex-shrink: 0;
+        border-radius: 24rem;
+        position: relative;
+        transition: .2s all ease-in-out;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__image-backdrop {
+        position: absolute;
+        top: 10rem;
+        right: 34rem;
+        min-width: 100%;
+        min-height: calc(100% + 27rem);
+        border-radius: 24rem;
+        border: 16rem solid var(--title-yellow);
+        z-index: -1;
+    }
+
+    &__title {
+        margin-bottom: 32rem;
+    }
+
+    &__desc {
+        margin-bottom: 40rem;
+    }
+
+    @include desktop-small {
+		gap: 90rem;
+	}
+
+    @include tablet {
+		flex-direction: column-reverse;
+        text-align: center;
+	}
+}

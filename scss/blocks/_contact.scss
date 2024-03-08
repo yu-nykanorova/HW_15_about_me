@@ -1,0 +1,96 @@
+.contact {
+    &__container {
+        padding: 96rem 0;
+        
+        @include desktop-small {
+            padding: 60rem 0;
+        }
+
+        @include tablet {
+            padding: 40rem 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24rem;
+    }
+
+    &__desc {
+        max-width: 700rem;
+        margin-bottom: 56rem;
+        color: var(--desc-second);
+    }
+}
+
+.contact-row {
+    display: flex;
+    gap: 223rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop-small {
+        flex-direction: column-reverse;
+        gap: 60rem;
+    }
+}
+
+.contact-info {
+    max-width: 347rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+
+    &__desc {
+        font-weight: 400;
+        color: #f3f4f6;
+    }
+
+    @include desktop-small {
+        max-width: 600rem;
+        gap: 10rem;
+    }
+
+    span {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16rem;
+        line-height: 256%;
+        color: #eab308;
+    }
+}
+
+.contact-form {
+    min-width: 540rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+    &__btn {
+        max-width: 123rem;
+    }
+
+    @include mobile {
+        min-width: 80%;
+    }
+}
+
+.field {
+    &__input, &__textarea {
+        min-width: 100%;
+        padding: 12rem 18rem;
+        background: var(--bg-fourth);
+        border: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        color: var(--title-light);
+        &::placeholder {
+            color: var(--title-light);
+            line-height: 256%;
+        }
+    }
+    &__textarea {
+        resize: none;
+        min-height: 166rem;
+    }
+    
+}

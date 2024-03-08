@@ -1,0 +1,49 @@
+.about-social {
+    &__container {
+        max-width: 700rem;
+        padding: 56rem 0;
+
+        @include tablet {
+            padding: 20rem 0;
+        }
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 24rem;
+        transition: .2s all ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__desc {
+        color: var(--desc-second);
+        margin-bottom: 56rem;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 16rem;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    &__link { 
+        color: var(--title-yellow);
+        & svg:hover {
+            path {
+                transition: .2s all ease-in-out;
+                fill: var(--title-yellow);
+            }
+        }
+    }
+
+    @include desktop-small {
+        padding: 60rem 0;
+    }
+
+    @include tablet {
+        padding: 40rem 0;
+    }
+}

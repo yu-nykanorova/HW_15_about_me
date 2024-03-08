@@ -1,0 +1,77 @@
+.experience {
+    padding: 96rem 0;
+    background: var(--bg-third);
+
+    &__title {
+		margin-bottom: 24rem;
+        font-family: --second-family;
+	}
+	
+	&__desc {
+		max-width: 600rem;
+        color: var(--desc-second);
+	}
+
+    @include desktop-small {
+		padding: 60rem 0;
+	}
+}
+
+.experience-list {
+	margin-top: 80rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350rem, 1fr));
+	gap: 30rem;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+}
+
+.experience-item {
+	padding: 32rem;
+	background: var(--bg-main);
+	border-radius: 12rem;
+	text-align: left;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: 0 0 15rem 0 rgba(255, 255, 255, 0.2);
+	}
+
+    &__period {
+        margin-bottom: 8rem;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20rem;
+        line-height: 135%;
+        color: var(--desc-third); 
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 26rem;
+        line-height: 158%;
+        color: var(--title-yellow);
+    }
+
+    &__name {
+        margin-bottom: 16rem;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16rem;
+        line-height: 169%;
+        color: var(--desc-third);
+    }
+
+    &__desc {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        line-height: 169%;
+        color: var(--desc-first);
+    }
+}
+

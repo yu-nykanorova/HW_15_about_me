@@ -1,0 +1,49 @@
+.welcome {
+    padding: 96rem 0;
+
+    @include tablet {
+		padding: 60rem 0;
+	}
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 199rem;
+
+    &__hi {
+        color: var(--title-yellow);
+        margin-bottom: 24rem;
+        &:hover {
+            color: #facc15;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 24rem;
+    }
+
+    &__image {
+        flex-shrink: 0;
+        border-radius: 24rem;
+        transition: .2s all ease-in-out;
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__btn {
+        padding: 8rem 20rem;
+        background: #facc15; 
+    }
+
+    @include desktop-small {
+		gap: 100rem;
+	}
+
+    @include tablet {
+		flex-direction: column;
+        text-align: center;
+	}
+}

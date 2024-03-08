@@ -1,0 +1,94 @@
+.header {
+    max-width: 1166rem;
+	margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21rem 20rem;
+
+    &__logo {
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 24rem;
+        color: var(--white);
+        transition: .2s all ease-in-out;
+        span {
+            color: var(--title-yellow);
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        @include tablet {
+            #headerIcon:checked ~ .header__ul {
+                transition: .2s all ease-in-out;
+                transform: translateX(0%);
+            }
+        }
+    }
+  
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 27rem;
+
+        @include tablet {
+            position: fixed;
+            z-index: 2;
+            width: 70%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.83);
+            flex-direction: column;
+            justify-content: center;
+            gap: 50rem;
+            align-items: center;
+            transition: .2s all ease-in-out;
+            transform: translateX(-120%);
+        }
+        
+    }
+
+    &__li {
+        transition: .2s all ease-in-out;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__li:first-of-type a {
+        color: var(--white);
+    }
+
+    &__a {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16rem;
+        text-transform: uppercase;
+        color: var(--desc-second);
+        &:hover {
+            color: var(--white);
+        }
+
+        @include tablet {
+            font-size: 30rem;
+        }
+    }
+    
+    &__menu {
+        display: none;
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    #headerIcon {
+        display: none;
+    }
+}
