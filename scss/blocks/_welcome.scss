@@ -16,7 +16,7 @@
         color: var(--title-yellow);
         margin-bottom: 24rem;
         &:hover {
-            color: #facc15;
+            color: var(--white);
         }
     }
 
@@ -35,7 +35,7 @@
 
     &__btn {
         padding: 8rem 20rem;
-        background: #facc15; 
+        background: var(--title-yellow); 
     }
 
     @include desktop-small {

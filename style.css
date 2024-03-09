@@ -392,6 +392,7 @@ body {
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16rem;
+  line-height: 256%;
   color: var(--title-light);
 }
 .field__input::-webkit-input-placeholder, .field__textarea::-webkit-input-placeholder {
@@ -421,7 +422,7 @@ body {
 }
 .experience__title {
   margin-bottom: 24rem;
-  font-family: --second-family;
+  font-family: var(--second-family);
 }
 .experience__desc {
   max-width: 600rem;
@@ -518,7 +519,7 @@ body {
   margin-bottom: 24rem;
 }
 .welcome-container__hi:hover {
-  color: #facc15;
+  color: var(--white);
 }
 .welcome-container__desc {
   margin-bottom: 24rem;
@@ -536,7 +537,7 @@ body {
 }
 .welcome-container__btn {
   padding: 8rem 20rem;
-  background: #facc15;
+  background: var(--title-yellow);
 }
 @media (max-width: 1200px) {
   .welcome-container {
